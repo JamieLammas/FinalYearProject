@@ -1,0 +1,94 @@
+<DOCTYPE! HTML>
+    <head>
+        <title>View Route</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style>
+	    html
+            {
+                margin: 0;
+                padding: 0;
+                font-family: arial;
+                background:url('bridge.jpg') no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+
+            body
+            {
+                margin: 0;
+                padding: 0;
+            }
+
+            #container
+            {
+                margin: auto;
+                padding-top: 5px;
+                background-color: rga(0,0,0);
+                background-color: rgba(0, 0, 0, 0.8);
+                opacity: 0.8;
+                width: 80%;
+                height: 65%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 50px;
+                right: 0;
+                border: 2px solid #000;
+            }
+
+            #title
+            {
+                width: 80%;
+                height: 60px;
+                text-align: center;
+                line-height: 60px;
+                font-size: 30px;
+                margin: 20px auto;
+                border-top: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                color: #fff;  
+            }
+
+            form
+            {
+                text-align: center;
+            }
+
+            button
+            {
+                width: 75%;
+                height: 50px;
+                background-color: #000;
+                border: 1px dashed #fff;
+                color: #fff;
+                font-size: 25px;     
+            }
+
+	</style>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="title"> View Route Details </div>
+        
+            <form action="leaflet_kml.html" method="get">
+                <button type="submit" value="View Route"> View Route </button>
+            </form>
+
+            <form action="time/time.py" method="get">
+                <button type="submit" value="Time Graph"> View Time Graph </button>
+            </form>
+
+            <form action="speed/speed.py" method="get">
+                <button type="submit" value="Speed Graph"> View Speed Graph </button>
+            </form>
+
+            <form action="altitude/altitude.py" method="get">
+                <button type="submit" value="Altitude Graph"> View Altitude Graph </button>
+            </form>
+        </div>
+    </body>
+</html>
