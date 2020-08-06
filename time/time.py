@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+
+import os, sys
+import cgi
+import cgitb
+cgitb.enable()
+import csv
+import matplotlib
+matplotlib.use('Agg')
+import pylab
+
+def make_fig():
+    #altitude = pylab.loadtxt('altitude.csv')
+    time = pylab.loadtxt('time.csv')
+    
+    pylab.title("Time Graph")
+    pylab.plot(time, 'o-')
+    pylab.ylabel("Time (Mins)")
+
+    print "Content-type:image/png\n"
+    pylab.savefig(sys.stdout, format='png')
+
+make_fig()
+
